@@ -3,10 +3,15 @@ from parse_catalog import ParseCatalog
 from flatten_catalog import FlattenCatalog
 
 if __name__ == "__main__":
-  beckn_catalog_file = "data/diagnostics/diagnostics_catalog_on_search.json"
-  beckn_catalog_exploded_file = "data/diagnostics/diagnostics_catalog_items.json"
-  beckn_catalog_flattened_file = "data/diagnostics/diagnostics_catalog_items_flattened.json"
   index_name = "diagnostics"
+  base_dir = f"/home/ubuntu/beckn/catalog_data/{index_name}"
+  # Source Catalog File in the format of on_search Beckn object
+  beckn_catalog_file = f"{base_dir}/{index_name}_catalog_on_search.json"
+
+  # These are auto generated and need not be created manually
+  beckn_catalog_exploded_file = f"{base_dir}/{index_name}_catalog_items.json"
+  beckn_catalog_flattened_file = f"{base_dir}/{index_name}_catalog_items_flattened.json"
+  
 
   try:
 
